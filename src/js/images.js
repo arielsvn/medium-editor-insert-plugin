@@ -676,4 +676,7 @@
         });
     };
 
+    // declare public object
+    window.MediumInsert.Images = Images;
+
 })(jQuery, window, document);

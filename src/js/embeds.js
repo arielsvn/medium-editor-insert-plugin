@@ -627,4 +627,7 @@
         });
     };
 
+    // declare public object
+    window.MediumInsert.Embeds = Embeds;
+
 })(jQuery, window, document);
