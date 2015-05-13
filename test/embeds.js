@@ -9,7 +9,8 @@ module('embeds', {
         this.$el.mediumInsert({
             addons: {
                 embeds: {
-                    oembedProxy: false
+                    oembedProxy: false,
+                    placeholderActive: true // the placeholder is already visible
                 }
             }
         });
@@ -238,7 +239,8 @@ test('embedding youtube', function () {
     this.$el.mediumInsert({
         addons: {
             embeds: {
-                oembedProxy: false
+                oembedProxy: false,
+                placeholderActive: true // the placeholder is already visible
             }
         }
     });
@@ -258,7 +260,8 @@ test('embedding vimeo', function () {
     this.$el.mediumInsert({
         addons: {
             embeds: {
-                oembedProxy: false
+                oembedProxy: false,
+                placeholderActive: true // the placeholder is already visible
             }
         }
     });
@@ -278,7 +281,8 @@ test('embedding instagram', function () {
     this.$el.mediumInsert({
         addons: {
             embeds: {
-                oembedProxy: false
+                oembedProxy: false,
+                placeholderActive: true // the placeholder is already visible
             }
         }
     });
@@ -298,7 +302,8 @@ test('converting bad embed into text', function () {
     this.$el.mediumInsert({
         addons: {
             embeds: {
-                oembedProxy: false
+                oembedProxy: false,
+                placeholderActive: true // the placeholder is already visible
             }
         }
     });

@@ -69,7 +69,7 @@
             this.core.getEditor().serialize = this.editorSerialize;
         }
 
-        this._placeholderActive = false;
+        this._placeholderActive = options.placeholderActive || false;
 
         this.init();
     }
