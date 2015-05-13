@@ -69,6 +69,8 @@
             this.core.getEditor().serialize = this.editorSerialize;
         }
 
+        this._placeholderActive = false;
+
         this.init();
     }
 
@@ -189,6 +191,7 @@
 
         $place.addClass('medium-insert-embeds medium-insert-embeds-input medium-insert-embeds-active');
 
+        this._placeholderActive = true;
         this.togglePlaceholder({ target: $place.get(0) });
 
         $place.click();
@@ -203,6 +206,8 @@
      */
 
     Embeds.prototype.togglePlaceholder = function (e) {
+        if (!this._placeholderActive) return;
+
         var $place = $(e.target),
             selection = window.getSelection(),
             range, $current, text;
@@ -236,6 +241,7 @@
 
         } else {
             this.$el.find('.medium-insert-embeds-active').remove();
+            this._placeholderActive = false;
         }
     };
 
@@ -258,6 +264,8 @@
      */
 
     Embeds.prototype.processLink = function (e) {
+        if (!this._placeholderActive) return;
+        
         var $place = this.$el.find('.medium-insert-embeds-active'),
             url;
 
